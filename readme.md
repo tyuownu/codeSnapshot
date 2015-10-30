@@ -1,21 +1,23 @@
-# collect code snapshot funny or useful or some awesome use method.(C/C++)
+# collect code snapshot funny or useful or some awesome use method.(C/C++, or python)
 
 [TOC]
 
 ## table collect by month-year
+
 ### 201510
-1. heapsort.hpp
-discribe: heap sort. Including build heap and sort.
+1. heapsort.hpp<br>
+discribe: heap sort. Including build heap and sort.<br>
 star: +++
-2. bigInt.cpp
-discribe: Explain how to deal with big int. referance(www.clanfei.com/2012/04/629.html)
+2. bigInt.cpp<br>
+discribe: Explain how to deal with big int. [referance](www.clanfei.com/2012/04/629.html)<br>
 star: +++++
-3. strcmp.h
-discribe: Realize the strcmp function
+3. strcmp.h<br>
+discribe: Realize the strcmp function<br>
 star: ++
-4. array2D.cpp
-discribe: How to malloc 2D array. Help to understand the pointer and array.
+4. array2D.cpp<br>
+discribe: How to malloc 2D array. Help to understand the pointer and array.<br>
 star: ++
+
 ### 201511
 
 ## note
