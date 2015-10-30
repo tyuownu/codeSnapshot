@@ -1,9 +1,11 @@
-# collect code snapshot funny or useful or some awesome use method.(C/C++, or python)
+# codeSnapshot
 
 [TOC]
 
-## table collect by month-year
+## why this repo
+collect code snapshot funny or useful or some awesome use method.(C/C++, or python)<br>
 
+## table collect by month-year
 ### 201510
 1. heapsort.hpp<br>
 discribe: heap sort. Including build heap and sort.<br>
@@ -17,6 +19,9 @@ star: ++
 4. array2D.cpp<br>
 discribe: How to malloc 2D array. Help to understand the pointer and array.<br>
 star: ++
+30. charSum.cpp
+discribe: Learn how to use map<char, int>.
+star: +++
 
 ### 201511
 
