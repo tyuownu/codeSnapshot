@@ -19,9 +19,17 @@ star: ++
 4. array2D.cpp<br>
 discribe: How to malloc 2D array. Help to understand the pointer and array.<br>
 star: ++
-30. charSum.cpp
-discribe: Learn how to use map<char, int>.
+30. charSum.cpp<br>
+discribe: Learn how to use map<char, int>.<br>
 star: +++
+31. singleNumber.cpp and tweetable.cpp<br>
+dircribe: <br>
+singleNumber.cpp: Learn bit manipulation. [Question](https://leetcode.com/problems/single-number/)<br>
+    Given an array of integers, every element appears three thime except for one. Fin that single on.<br>
+star: +++++<br>
+tweetable.cpp: FILE write, to produce a pic. [Question](https://codegolf.stackexchange.com/question/35569/tweetable-mathematical-art)<br>
+star: ++++<br>
+this two question is very hard to understand and awesome. Need time to understand it clearly.
 
 ### 201511
 
