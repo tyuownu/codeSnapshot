@@ -1,8 +1,8 @@
 /*************************************************************************
-    > File Name: charSum.cpp
-    > Author: 
-    > Mail: 
-    > Created Time: 2015年10月30日 星期五 20时21分29秒
+    > File Name: char_sum.cpp
+    > Author: tyu
+    > Mail: tyuownu@gmail.com
+    > Created Time: 30/10/2015 - 20:21:29
  ************************************************************************/
 
 #include<iostream>
