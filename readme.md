@@ -33,7 +33,12 @@ this two question is very hard to understand and awesome. Need time to understan
 
 ### 201511
 1. rotate_string.cpp<br>
-discribe: rotate string according a int k. E.g., input string="abcdef", k=2. Output: "cdefab"<br>. Key point is time complexity.<br>
+discribe: rotate string according a int k. E.g., input string="abcdef", k=2. Output: "cdefab". Key point is time complexity.<br>
+star: ++++
+2. string_contains.cpp<br>
+discribe: Input, string A and string B. B.len < A.len, to<br>
+determine whether A contains B.<br>
+e.g. A="ABCD", B="CDC". return true;<br>
 star: ++++
 
 ## note
