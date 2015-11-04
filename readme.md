@@ -40,6 +40,14 @@ discribe: Input, string A and string B. B.len < A.len, to<br>
 determine whether A contains B.<br>
 e.g. A="ABCD", B="CDC". return true;<br>
 star: ++++
+3. string_to_int.cpp<br>
+discribe: Rewrite the system function atoi. The most important this is overflow.<br>
+star: ++
+4. longest_palindrome.cpp<br>
+discribe: [Problem](https://github.com/julycoding/The-Art-Of-Programming-By-July/blob/master/ebook/zh/01.05.md)<br>
+It hard to find the pattern. But in the algorithm, extend string is very ingenious.<br>
+So, it have two points we can learn. 1. Extend string. 2. pattern.<br>
+star: ++++
 
 ## note
 1. I will rank the code from one star to five star '+' for star
