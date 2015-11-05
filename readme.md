@@ -48,6 +48,10 @@ discribe: [Problem](https://github.com/julycoding/The-Art-Of-Programming-By-July
 It hard to find the pattern. But in the algorithm, extend string is very ingenious.<br>
 So, it have two points we can learn. 1. Extend string. 2. pattern.<br>
 star: ++++
+5. all_permutation.cpp<br>
+discribe: find a string all permutation[link](http://www.cnblogs.com/bakari/archive/2012/08/02/2620826.html);<br>
+notes: 1. How to solve the question if the string have repeat char. 2. Recursive.<br>
+star: ++++
 
 ## note
 1. I will rank the code from one star to five star '+' for star
