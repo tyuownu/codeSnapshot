@@ -88,53 +88,58 @@ void FindLastDisOrder(char *perm, int from, int to)
 {
     // this is find the location of 'f', if index = -1, it's that there are disorder.
     // index is the location of 'f'
-    int index=-1;
-    for(int j=to-1; j>=0; j--)
+    int index;
+    for(index=to-1; ( index>=0 )&&(perm[index] >= perm[index+1]); index--)
     {
-        if(perm[j] < perm[j+1])
-        {
-            index = j;
-            break;
-        }
+        /*
+         *if(perm[j] < perm[j+1])
+         *{
+         *    index = j;
+         *    break;
+         *}
+         */
+        ;
     }
 
-    if(index >= 0)
+    if(index < 0)
+        return ;
+    int j;
+
+    // find the 'g', it's define as behind 'f' the most smallest number larger than 'f'
+    // in this example is 'g'
+    // find the the location of 'g', for swap
+    for(j=index+1;  (j+1<= to) && (perm[j+1]>perm[index]); j++)
     {
-        int j=index+1;
+        /*
+         *if(i+1<= to)
+         *{
+         *    if(perm[i] > perm[index] && perm[i+1] <= perm[index])
+         *    {
+         *        j = i;
+         *        break;
+         *    }
+         *}
+         *else
+         *{
+         *    j = to;
+         *}
+         */
+        ;
 
-        // find the 'g', it's define as behind 'f' the most smallest number larger than 'f'
-        // in this example is 'g'
-        // find the the location of 'g', for swap
-        for(int i=index+1;  i <= to; i++)
-        {
-            if(i+1<= to)
-            {
-                if(perm[i] > perm[index] && perm[i+1] <= perm[index])
-                {
-                    j = i;
-                    break;
-                }
-            }
-            else
-            {
-                j = to;
-            }
+    }
 
-        }
-
-        // swap('f', 'g')
-        swap(perm[index], perm[j]);
-        // sort the char before 'g'
+    // swap('f', 'g')
+    swap(perm[index], perm[j]);
+    // sort the char before 'g'
 //        sort(perm, index+1, to);
-        
+    
 //      donot need sort, just reorder [index+1, to]
-        int start = index+1, end = to;
-        while(start<end)
-        {
-            swap(perm[start], perm[end]);
-            start++;
-            end--;
-        }
+    int start = index+1, end = to;
+    while(start<end)
+    {
+        swap(perm[start], perm[end]);
+        start++;
+        end--;
     }
 }
 void CalcAllPermutationNext(char *perm, int from, int to)
