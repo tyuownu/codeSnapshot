@@ -125,7 +125,16 @@ void FindLastDisOrder(char *perm, int from, int to)
         // swap('f', 'g')
         swap(perm[index], perm[j]);
         // sort the char before 'g'
-        sort(perm, index+1, to);
+//        sort(perm, index+1, to);
+        
+//      donot need sort, just reorder [index+1, to]
+        int start = index+1, end = to;
+        while(start<end)
+        {
+            swap(perm[start], perm[end]);
+            start++;
+            end--;
+        }
     }
 }
 void CalcAllPermutationNext(char *perm, int from, int to)
