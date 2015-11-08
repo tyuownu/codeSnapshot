@@ -10,19 +10,19 @@ using namespace std;
 
 int MaxSubArray(int *a, int n)
 {
-    int *max_temp = new int[n+1];
-    int *sum_temp = new int[n+1];
-    max_temp[0] = 0, sum_temp[0] = 0;
-    for(int i=0; i<n ; i++)
+    int *max_temp = new int[n];
+    int *sum_temp = new int[n];
+    max_temp[0] = a[0], sum_temp[0] = a[0];
+    for(int i=1; i<n ; i++)
     {
-        if(sum_temp[i] < 0)
-            sum_temp[i+1] = a[i];
+        if(sum_temp[i-1] <= 0)
+            sum_temp[i] = a[i];
         else
-            sum_temp[i+1] = a[i] + sum_temp[i];
+            sum_temp[i] = a[i] + sum_temp[i-1];
 
-        max_temp[i+1] = max(sum_temp[i+1], sum_temp[i]);
+        max_temp[i] = max(max_temp[i-1], sum_temp[i]);
     }
-    return max_temp[n];
+    return max_temp[n-1];
 }
 
 int main()
