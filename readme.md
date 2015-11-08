@@ -52,6 +52,12 @@ star: ++++
 discribe: find a string all permutation[link](http://www.cnblogs.com/bakari/archive/2012/08/02/2620826.html);<br>
 notes: 1. How to solve the question if the string have repeat char. 2. Recursive.<br>
 star: ++++
+6. first_appear_once_char.cpp<br>
+discribe: find the first appear only once char. See more in cpp file.<br>
+star: ++
+7. max_subarray_sum.cpp<br>
+discribe: input a array(positive or negitive). Find the max sum of subarray.<br>
+star: ++
 
 ## note
 1. I will rank the code from one star to five star '+' for star
