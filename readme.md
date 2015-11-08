@@ -56,8 +56,11 @@ star: ++++
 discribe: find the first appear only once char. See more in cpp file.<br>
 star: ++
 7. max_subarray_sum.cpp<br>
-discribe: input a array(positive or negitive). Find the max sum of subarray.<br>
+discribe: input a array of integers(positive or negitive). Find the max sum of subarray.<br>
 star: ++
+8. odd_even_exchange.cpp<br>
+discribe: imput a array of integers. Put odd to first half and even to second half. time complexity O(n)<br>
+star: ++ 
 
 ## note
 1. I will rank the code from one star to five star '+' for star
