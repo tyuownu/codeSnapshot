@@ -59,8 +59,21 @@ star: ++
 discribe: input a array of integers(positive or negitive). Find the max sum of subarray.<br>
 star: ++
 8. odd_even_exchange.cpp<br>
-discribe: imput a array of integers. Put odd to first half and even to second half. time complexity O(n)<br>
+discribe: input a array of integers. Put odd to first half and even to second half. time complexity O(n)<br>
 star: ++ 
+9. sort.cpp<br>
+discribe: 8 methods of sort algorithm.<br>
+| name   | time        | space       | stable |
+| ---    | ---         | ---         | ---    |
+| insert | O(N^2)      | O(1)        | Y      |
+| select | O(N^2)      | O(1)        | N      |
+| quick  | O(N*log(N)) | O(N*log(N)) | N      |
+| bubble | O(N^2)      | O(1)        | Y      |
+| shell  | O(N^1.3)    | O(1)        | N      |
+| heap   | O(N*log(N)) | O(1)        | N      |
+| merge  | O(N*log(N)) | O(N)        | Y      |
+| radix  | O(d(r+N))   | O(rd+N)     | Y      |
+star: ++++
 
 ## note
 1. I will rank the code from one star to five star '+' for star
