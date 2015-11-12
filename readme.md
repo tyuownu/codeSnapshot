@@ -74,6 +74,10 @@ discribe: 8 methods of sort algorithm.<br>
 | merge  | O(N*log(N)) | O(N)        | Y      |
 | radix  | O(d(r+N))   | O(rd+N)     | Y      |
 star: ++++
+10. sort.cpp(heapsort)<br>
+describe: heap sort. first build heap and than sort.<br>
+TODO: need import or clear<br>
+star: +++
 
 ## note
 1. I will rank the code from one star to five star '+' for star

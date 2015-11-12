@@ -93,9 +93,49 @@ void ShellSort(int *a, const int begin, const int end)
     
 }
 
+// algorithm 6: heap sort
+// time complexity: O(n*log(n)), large-top heap.
+void Rotate(int *a, const int k, const int n)
+{
+    if(k<=(n-1)/2)
+    {
+        if(a[2*k+1] > a[k]) 
+        {
+            if(a[2*k+1] < a[2*k+2] && 2*k+2 <= n) 
+            {
+                swap(a[k], a[2*k+2]);
+                Rotate(a, 2*k+2, n);
+            }
+            else 
+            {
+                swap(a[k], a[2*k+1]);
+                Rotate(a, 2*k+1, n);
+            }
+        }
+        else if(a[2*k+2] > a[k] && 2*k+2 <= n)
+        {
+            swap(a[k], a[2*k+2]);
+            Rotate(a, 2*k+2, n);
+        }
+        else return ;
+    }
+}
+void BuildHeap(int *a, const int n)
+{
+    for(int i=(n-1)/2; i>=0; i--)
+    {
+        Rotate(a, i, n);
+    }
+}
 void HeapSort(int *a, const int begin, const int end)
 {
-    
+//    BuildHeap(a, end);
+    int i;
+    for(i=end-1; i>=1; i--)
+    {
+        BuildHeap(a, i);
+        swap(a[0], a[i]);
+    }
 }
 
 void MergeSort(int *a, const int begin, const int end)
@@ -114,7 +154,8 @@ int main()
 //    SelectSort(a, 0, 8);
 //    QuickSort(a, 0, 8);
 //    SelectSort(a, 0, 8);
-    BubbleSort(a, 0, 8);
+//    BubbleSort(a, 0, 8);
+    HeapSort(a,  0, 8);
     for(int i=0; i<8; i++)
         cout<<a[i]<<" ";
     cout<<endl;
