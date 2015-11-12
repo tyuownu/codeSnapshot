@@ -95,46 +95,36 @@ void ShellSort(int *a, const int begin, const int end)
 
 // algorithm 6: heap sort
 // time complexity: O(n*log(n)), large-top heap.
-void Rotate(int *a, const int k, const int n)
+// Algorithm from : allmycode/sort.git, this is more clear.
+void BigHeap(int *a, const int i, const int size)
 {
-    if(k<=(n-1)/2)
+    int left = 2*i +1;
+    int right = 2*i +2;
+    int index = i;
+    if(left < size && a[left]>a[index]) index = left;
+    if(right < size && a[right]>a[index]) index = right;
+    if(index != i)
     {
-        if(a[2*k+1] > a[k]) 
-        {
-            if(a[2*k+1] < a[2*k+2] && 2*k+2 <= n) 
-            {
-                swap(a[k], a[2*k+2]);
-                Rotate(a, 2*k+2, n);
-            }
-            else 
-            {
-                swap(a[k], a[2*k+1]);
-                Rotate(a, 2*k+1, n);
-            }
-        }
-        else if(a[2*k+2] > a[k] && 2*k+2 <= n)
-        {
-            swap(a[k], a[2*k+2]);
-            Rotate(a, 2*k+2, n);
-        }
-        else return ;
+        swap(a[index], a[i]);
+        BigHeap(a, index, size);
     }
 }
+
 void BuildHeap(int *a, const int n)
 {
-    for(int i=(n-1)/2; i>=0; i--)
+    for(int i=n/2; i>=0; i--)
     {
-        Rotate(a, i, n);
+        BigHeap(a, i, n);
     }
 }
 void HeapSort(int *a, const int begin, const int end)
 {
 //    BuildHeap(a, end);
-    int i;
-    for(i=end-1; i>=1; i--)
+    BuildHeap(a,  end);
+    for(int i=end-1; i>=0; i--)
     {
-        BuildHeap(a, i);
         swap(a[0], a[i]);
+        BigHeap(a, 0, i);
     }
 }
 
