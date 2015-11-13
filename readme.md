@@ -78,6 +78,9 @@ star: ++++
 describe: heap sort. first build heap and than sort.<br>
 TODO: need import or clear<br>
 star: +++
+11. sort.cpp(mergesort)<br>
+describe: merge sort. learn more about divide-conquer method.<br>
+star: ++++
 
 ## note
 1. I will rank the code from one star to five star '+' for star

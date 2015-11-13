@@ -121,15 +121,48 @@ void HeapSort(int *a, const int begin, const int end)
 {
 //    BuildHeap(a, end);
     BuildHeap(a,  end);
+    int size = end;
     for(int i=end-1; i>=0; i--)
     {
         swap(a[0], a[i]);
+        size--;
         BigHeap(a, 0, i);
     }
 }
 
+// Algorithm 7: merge sort.
+// time complexity: O(N*log(N))
+void SortOrderArr(int *a, const int begin, const int mid, const int end)
+{
+    int *p = new int[end - begin+1];
+    int first_left = begin;
+    int second_left = mid+1;
+    int i=0;
+    while(first_left <= mid && second_left <= end)
+    {
+        if(a[first_left] < a[second_left]) p[i++] = a[first_left++];
+        else p[i++] = a[second_left++];
+    }
+
+    if(first_left<=mid)
+        while(first_left<=mid)
+            p[i++] = a[first_left++];
+    else
+        while(second_left <= end)
+            p[i++] = a[second_left++];
+
+    for(int j=0; j<i; j++)
+        a[begin+j] = p[j];
+}
 void MergeSort(int *a, const int begin, const int end)
 {
+    if(begin < end)
+    {
+            int mid = begin + (end-begin)/2;
+            MergeSort(a, begin, mid);
+            MergeSort(a, mid+1, end);
+            SortOrderArr(a, begin, mid, end);
+    }
     
 }
 
@@ -137,7 +170,7 @@ void RadixSort(int *a, const int begin, const int end)
 {
     
 }
-// TODO: shell sort, heap sort, merge sort, radix sort
+// TODO: shell sort, merge sort, radix sort
 int main()
 {
     int a[]={2,4,1,5,8,3,7,6};
@@ -145,7 +178,8 @@ int main()
 //    QuickSort(a, 0, 8);
 //    SelectSort(a, 0, 8);
 //    BubbleSort(a, 0, 8);
-    HeapSort(a,  0, 8);
+//    HeapSort(a,  0, 8);
+    MergeSort(a, 0, 7);
     for(int i=0; i<8; i++)
         cout<<a[i]<<" ";
     cout<<endl;
