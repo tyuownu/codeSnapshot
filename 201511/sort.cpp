@@ -10,23 +10,23 @@ using namespace std;
 
 // algorithm 1: Insert sort
 // time complexity: O(n^2)
-void InsertSort(int *a, const int begin, const int end)
+void InsertSort(int *a, const int begin, const int end, const int step)
 {
     if(begin < end)
     {
-        for(int i=1; i<end; i++)
+        for(int i=begin+step ; i<end; )
         {
             int temp = a[i], j;
-            for(j=i-1; j>=0 && j<end-1; j--)
+            for(j=i-step; j>=0 && j<end-step; )
             {
                 if(temp<a[j])
-                    a[j+1] = a[j];
+                    a[j+step] = a[j];
                 else
-                {
                     break;
-                }
+                j = j-step;
             }
-            a[j+1] = temp;
+            a[j+step] = temp;
+            i = i+step;
         }
     }
 }
@@ -88,8 +88,21 @@ void BubbleSort(int *a, const int begin, const int end)
 
 // algorithm 5: shell sort
 // time complexity: O(n*log(n))
+// TODO: adding step to InsertSort so can use for shell sort.
+
 void ShellSort(int *a, const int begin, const int end)
 {
+    int step = end/2;
+    int time = 2;
+    while(step>=1)
+    {
+        for(int i=0; i<time; i++)
+        {
+            InsertSort(a, begin, end, step );
+        }
+        step = step/2;
+        time = time*2;
+    }
     
 }
 
@@ -174,12 +187,14 @@ void RadixSort(int *a, const int begin, const int end)
 int main()
 {
     int a[]={2,4,1,5,8,3,7,6};
+//    InsertSort(a, 1, 8, 2);
 //    SelectSort(a, 0, 8);
 //    QuickSort(a, 0, 8);
 //    SelectSort(a, 0, 8);
 //    BubbleSort(a, 0, 8);
 //    HeapSort(a,  0, 8);
-    MergeSort(a, 0, 7);
+//    MergeSort(a, 0, 7);
+    ShellSort(a, 0, 8);
     for(int i=0; i<8; i++)
         cout<<a[i]<<" ";
     cout<<endl;
